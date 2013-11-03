@@ -3,6 +3,8 @@
 (setq mac-command-key-is-meta t)
 (setq mac-command-modifier 'meta) 
 (fset 'yes-or-no-p 'y-or-n-p)
+(setq indent-tabs-mode nil)
+(global-font-lock-mode 1)
 
 (require 'linum)
 (line-number-mode 1)
