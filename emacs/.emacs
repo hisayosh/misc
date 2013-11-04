@@ -1,5 +1,4 @@
 (add-to-list 'load-path"~/.emacs.d")
-(add-to-list 'load-path"~/.emacs.d/themes")
 (setq mac-command-key-is-meta t)
 (setq mac-command-modifier 'meta) 
 (fset 'yes-or-no-p 'y-or-n-p)
@@ -14,24 +13,23 @@
 (auto-compression-mode 1)
 (setq tramp-default-method "ssh")
 
-(require 'color-theme)
-(color-theme-clarity)
-(defface hl-line '((t (:background "DarkSlateGrey")))
- "Face to use for `hl-line-face'." :group 'hl-line)
-(setq hl-line-face 'hl-line)
-(global-hl-line-mode t) ; turn it on for all modes by default
-
 (setq c-default-style "linux" c-basic-offset 8)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Color Theme 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(load-theme 'deeper-blue t)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Python Mode
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(add-to-list 'load-path "~/.emacs.d/python-mode.el-6.1.2")
 (setq py-install-directory "~/.emacs.d/python-mode.el-6.1.2")
-(add-to-list 'load-path py-install-directory)
 (require 'python-mode)
 (setq py-load-pymacs-p t)
 (require 'auto-complete-config)
 (ac-config-default)
+(setq py-shell-name "python")
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; GNU GLOBAL(gtags)
