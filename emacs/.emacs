@@ -24,6 +24,16 @@
 (setq c-default-style "linux" c-basic-offset 8)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Python Mode
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(setq py-install-directory "~/.emacs.d/python-mode.el-6.1.2")
+(add-to-list 'load-path py-install-directory)
+(require 'python-mode)
+(setq py-load-pymacs-p t)
+(require 'auto-complete-config)
+(ac-config-default)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; GNU GLOBAL(gtags)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (autoload 'gtags-mode "gtags" "" t)
